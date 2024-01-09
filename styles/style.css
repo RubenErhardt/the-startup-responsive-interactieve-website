@@ -1,0 +1,16 @@
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.header-full{
+  display: flex;
+  gap: 8em;
+  margin-top: 1px;
+}
+
+.main-meet{
+  margin-top: 100px;
+  margin-left: 20px;
+}
