@@ -30,7 +30,7 @@ header {
 
 .header-full {
   max-width: 430px;
-  padding: 0 1em;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,7 @@ header {
   color: white;
 }
 
-.header-full a:hover{
+.header-full a{
   color:var(--green);
 }
 
@@ -52,19 +52,26 @@ header {
 }
 
 .team-text{
-  text-decoration: underline var(--green);
+  border-bottom: solid 0.1em var(--green);
+  padding-bottom: 3px;
 }
 
 .text p{
   color: var(--ptext);
+  border-bottom: solid 0.2em var(--green);
+  padding-bottom: 10px;
 }
 
 .the-team{
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .foto-2{
   margin-top: 30px;
+}
+
+.firstname-lastname:hover{
+  color: var(--green);
 }
 
 
