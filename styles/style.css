@@ -27,7 +27,7 @@ body {
 
 /* ========= NAV ========= */
 header {
-  padding: 1em 1em;
+  padding: 1em 0.8em;
 }
 
 .header-full {
@@ -73,10 +73,10 @@ header {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #333;
+  background-color: #171717;
   left: -200px;
   padding: 20px;
-  color: white;
+  color: var(--white);
   height: 100%;
   width: 100%;
   transition: left 0.5s ease-in-out; /* Voeg overgang toe aan de positie */
@@ -93,10 +93,6 @@ header {
   font-size: 20px;
   cursor: pointer;
 }
-
-
-
-
 
 .text h1 {
   margin-bottom: 40px;
@@ -151,16 +147,14 @@ button:hover {
   color: var(--green);
 }
 
-.foto-1,
-.foto-2 {
+.foto {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
 
-.foto-1 img,
-.foto-2 img {
+.foto img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
@@ -171,9 +165,13 @@ button:hover {
   border-radius: 15px;
 }
 
+.foto img {
+    filter: grayscale(100%);
+}
+
+
 @media (max-width: 430px) {
-  .foto-1 img,
-  .foto-2 img {
+  .foto img {
     width: 395px;
     height: auto;
     margin: 5px;
@@ -189,6 +187,35 @@ button:hover {
   text-align: center;
   margin-bottom: -30px;
 }
+
+.firstname-lastname {
+  transition: color 0.3s ease; /* Add smooth transition for color change */
+}
+
+[class^="persoon-"]:hover .firstname-lastname {
+  color: var(--green);
+}
+
+#TDT h2 {
+  animation: titleAnimation 4s infinite; /* Adjust the duration and other properties as needed */
+  color: var(--white);
+}
+
+/*waarom zorgt dit ervoor dat er invisible space komt
+@keyframes titleAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+
 
 
 
