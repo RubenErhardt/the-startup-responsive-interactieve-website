@@ -79,7 +79,7 @@ header {
   color: var(--white);
   height: 100%;
   width: 100%;
-  transition: left 0.3s ease-in-out; /* Voeg overgang toe aan de positie */
+  transition: left 0.5s ease-in-out; /* Voeg overgang toe aan de positie */
 }
 
 .menu-content.show {
