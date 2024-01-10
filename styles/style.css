@@ -13,6 +13,8 @@ body {
   background-color: #171717;
   color: white;
   font-family: 'Ubuntu', sans-serif;
+  margin: 0; 
+  letter-spacing:normal;
 }
 
 * {
@@ -20,12 +22,12 @@ body {
   list-style: none;
   box-sizing: border-box;
   margin: 0;
-  padding: 0; /* Reset default padding */
+  padding: 0; 
 }
 
 /* ========= NAV ========= */
 header {
-  padding: 1em 0;
+  padding: 1em 1em;
 }
 
 .header-full {
@@ -33,8 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 8;
-  margin-bottom: 50px;
-  margin: 10px;
+  margin-bottom: 20px; /* Adjusted margin for better spacing */
 }
 
 .header-full a {
@@ -43,6 +44,10 @@ header {
 
 .header-full a:hover {
   color: var(--white);
+}
+
+#openMenu{
+  font-size: 25px;
 }
 
 .overlay {
@@ -74,16 +79,24 @@ header {
 }
 
 .text h1 {
-  margin-bottom: 20px;
-}
-
-.container{
-  margin: 20px;
+  margin-bottom: 40px;
 }
 
 .team-text {
   border-bottom: solid 0.1em var(--green);
   padding-bottom: 3px;
+}
+
+.container {
+  margin: 25px;
+}
+
+.groepsfoto img {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .text p {
@@ -94,10 +107,13 @@ header {
 
 .the-team {
   margin-top: 60px;
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
 }
 
+.the-team p{
+  margin-left: 20px;
+}
 
 button {
   color: var(--ptext);
@@ -105,50 +121,54 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 17px;
+  margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 button:hover {
   color: var(--green);
 }
 
-.foto-1, .foto-2 {
+.foto-1,
+.foto-2 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
 
-.foto-1 img, .foto-2 img {
+.foto-1 img,
+.foto-2 img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   display: block;
-  margin: 10px; 
+  margin: 10px;
   margin-left: 20px;
+  border-radius: 15px;
 }
 
 @media (max-width: 430px) {
-  .foto-1 img, .foto-2 img {
-      width: 395px; /* Set a specific width for screens smaller than 430px */
-      height: auto; /* Maintain aspect ratio */
-      margin: 5px; /* Adjust the margin for smaller screens */
-      margin-left: 10px; /* Adjust the left margin for smaller screens */
+  .foto-1 img,
+  .foto-2 img {
+    width: 395px;
+    height: auto;
+    margin: 5px;
+    margin-left: 10px;
+  }
+
+  .the-team p {
+    margin-left: 10px;
   }
 }
 
-
-.the-team p{
-  margin-left: 20px;
+#TDT {
+  text-align: center;
+  margin-bottom: -30px;
 }
-
-@media (max-width: 430px) {
-  .the-team p{
-    margin-left:10px;
-  }
-}
-
 
 
 
