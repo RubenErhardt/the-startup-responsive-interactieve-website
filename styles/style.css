@@ -1,20 +1,74 @@
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+  --white: #FFFFFF;
+  --green:#04d043;
+  --grey:#5b5b5b;
+  --ptext:rgb(186, 186, 186);
+}
+
 
 body{
-  background-color: black;
+    background-color:#161617;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*{
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 3px;
+}
+
+/* ========= NAV ========= */
+header {
+  padding: 1em 0em 0em 0em;
+}
+
+.header-full {
+  max-width: 430px;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 8;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.header-full a{
   color: white;
 }
 
-.header-full{
-  display: flex;
-  gap: 10em;
+.header-full a:hover{
+  color:var(--green);
 }
 
-.main-meet{
-  margin-top: 50px;
-  margin-left: 20px;
+.text h1{
+  margin-bottom: 20px;
 }
 
-u{
-
+.team-text{
+  text-decoration: underline var(--green);
 }
+
+.text p{
+  color: var(--ptext);
+}
+
+.the-team{
+  margin-top: 30px;
+}
+
+.foto-2{
+  margin-top: 30px;
+}
+
+
+
+
+
 
