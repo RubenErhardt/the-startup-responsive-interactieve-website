@@ -168,14 +168,14 @@ main {
 
 .teamsection {
   max-width: 1000px;
-  margin: 0 auto; /* Centreer de container op de pagina */
+  margin: 0 auto; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centreer de items horizontaal */
+  justify-content: center; 
 }
 
 .containerTeam {
-  text-align: center; /* Centreer de inhoud van de container */
+  text-align: center; 
 }
 
 
