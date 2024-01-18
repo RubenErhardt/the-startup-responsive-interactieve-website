@@ -128,20 +128,32 @@ header {
 
 /* Teamtekst beginpagina sectie */
 
-.container p{
-  max-width: 400px;
-}
-
 main {
   margin: 25px;
 }
 
-.teams h1 {
-  margin-bottom: 20px;
-}
-
 .teams {
   margin-bottom: 10px;
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Align elements vertically in the center */
+  gap: 20px; /* Add spacing between elements */
+}
+
+.text-container {
+  flex-grow: 1; /* Take remaining space in the container */
+}
+
+
+.teams h1 {
+  margin-bottom: 20px;
+  
+}
+
+.teams p {
+  color: var(--ptext);
+  max-width: 400px;
+  min-width: 400px;
+  
 }
 
 .team-text {
@@ -149,19 +161,16 @@ main {
   padding-bottom: 3px;
 }
 
-
-.buttons {
-  margin-top: 20px;
-}
-
 /* Groepsfoto sectie */
 
 .groepsfoto img {
   margin-bottom: 20px;
   margin-top: 20px;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
+  border-radius: 16px;
+  width: 100%; 
+  max-width: 475px; 
+  max-height: 350px; 
+  height: auto; 
 }
 
 /* The Team-sectie */
@@ -228,7 +237,7 @@ button {
   cursor: pointer;
   font-size: 17px;
   margin-right: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 button:hover {
@@ -277,14 +286,22 @@ button:hover {
   }
 
   .team-member {
-    margin-bottom: 30px; /* Voeg 20 pixels onder elke team-member toe (pas deze waarde aan naar wens) */
+    margin-bottom: 30px; 
   }
 }
 
+@media (max-width: 750px) {
+  .teams {
+    flex-direction: column; 
+    text-align: center; 
+  }
+}
 
-
-
-
+@media (min-width: 750px) {
+  button {
+    margin-bottom: 200px;
+  }
+}
 /* TDT sectie */
 
 #TDT h2 {
