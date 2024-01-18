@@ -16,6 +16,7 @@ body {
   color: var(--white);
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
+  padding: 0;
   letter-spacing: normal;
 }
 
@@ -31,6 +32,10 @@ body {
 
 header {
   padding: 1em 0.8em;
+}
+
+.logo{
+  margin-top: 20px;
 }
 
 .header-full {
@@ -123,7 +128,7 @@ header {
 
 /* Teamtekst beginpagina sectie */
 
-.container{
+.container p{
   max-width: 400px;
 }
 
@@ -161,11 +166,18 @@ main {
 
 /* The Team-sectie */
 
-.containerTeam {
-  text-align: center;
+.teamsection {
+  max-width: 1000px;
+  margin: 0 auto; /* Centreer de container op de pagina */
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Centreer de items horizontaal */
 }
+
+.containerTeam {
+  text-align: center; /* Centreer de inhoud van de container */
+}
+
 
 #teamSelector {
   background-color: var(--green);
@@ -175,6 +187,7 @@ main {
   border: 1px solid var(--green);
   border-radius: 5px;
   cursor: pointer;
+
 }
 
 #teamSelector:hover {
@@ -251,7 +264,7 @@ button:hover {
 
 /* Media Query sectie */
 
-@media (max-width: 500px) {
+@media (max-width: 470px) {
   .foto img {
     width: 365px;
     height: auto;
@@ -262,7 +275,15 @@ button:hover {
   .team-section p {
     margin-left: 10px;
   }
+
+  .team-member {
+    margin-bottom: 30px; /* Voeg 20 pixels onder elke team-member toe (pas deze waarde aan naar wens) */
+  }
 }
+
+
+
+
 
 /* TDT sectie */
 
@@ -291,3 +312,58 @@ button:hover {
 .TDT {
   display: flex;
 }
+
+footer {
+  color: var(--white);
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer{
+  margin-top: 50px;
+  margin-bottom:35px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: var(--green);
+}
+
+.footer-arrow {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: var(--green); 
+  padding:6px;
+  border-radius: 50%;
+  animation: bounce 1s infinite; 
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+

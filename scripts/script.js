@@ -28,15 +28,21 @@ document.getElementById('closeMenu').addEventListener('click', function() {
   });
 });
 
-const teamSelector = document.getElementById('teamSelector');
-const teamSections = document.querySelectorAll('.team-section');
+document.getElementById('teamSelector').addEventListener('change', function () {
+  var selectedTeam = this.value;
+  var teamSections = document.querySelectorAll('.team-section');
 
-teamSelector.addEventListener('change', () => {
-  const selectedTeam = teamSelector.value;
+  teamSections.forEach(function (section) {
+    section.style.display = 'none';
+  });
 
-  // Verberg alle teamsecties
-  teamSections.forEach(section => section.classList.remove('visible'));
+  document.getElementById(selectedTeam).style.display = 'flex';
+});
 
-  // Toon de geselecteerde teamsectie
-  document.getElementById(selectedTeam).classList.add('visible');
+const footerArrow = document.querySelector('.footer-arrow');
+const headerFull = document.querySelector('.header-full');
+
+footerArrow.addEventListener('click', () => {
+  // Voeg hier eventuele animaties of andere gewenste logica toe
+  headerFull.scrollIntoView({ behavior: 'smooth' }); // Scroll naar de header-full class
 });
