@@ -10,120 +10,145 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Begin van de header -->
-  <header>
-    <div class="header-full">
-      <a href="https://www.labela.nl/"> <img src="images/Screenshot 2024-01-10 115105.png" alt="Logo" width="120" height="auto"></a>
-      <nav class="hidden">
-        <ul>
-          <li> 
-            <a href="#" id="openMenu">Menu</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-<!-- Begin van "hamburgermenu"-->
-  <div class="overlay" id="menuOverlay">
-    <div class="menu-content">
-      <span class="close-btn" id="closeMenu" data-tooltip="Back to Homepage">&times;</span>
-      <section>Home</section>
-      <section>Services</section>
-      <section>Contact</section>
-    </div>
-  </div>
+    <!-- Header sectie -->
+    <header>
+      <div class="header-full">
+        <a href="https://www.labela.nl/">
+          <img src="images/Screenshot 2024-01-10 115105.png" alt="Label A Logo" width="120" height="auto">
+        </a>
+        <nav class="hidden">
+          <ul>
+            <li>
+              <a href="#" id="openMenu">Menu</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   
-<!-- Begin van team text begin pagina-->
-  <div class="container">
-    <div class="content">
-      <div class="text">
-        <h1>
-          Meet our <span class="team-text">team</span>
-        </h1>
+    <!-- Hamburgermenu -->
+    <div class="overlay" id="menuOverlay">
+      <div class="menu-content">
+        <span class="close-btn" id="closeMenu" data-tooltip="Back to Homepage">&times;</span>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  
+    <!-- Teamtekst beginpagina -->
+    <main>
+      <div class="container">
+      <section class="teams">
+        <h1>Meet our <span class="team-text">team</span></h1>
         <p>
           "We empower companies to transform their aspirations into reality. As a carefully curated collective of global experts, we share a common objective: crafting brands and digital experiences that redefine industries, leave a lasting impact, influence culture, and foster meaningful connections. Together, we bring dreams to life and inspire positive change."
         </p>
-        <div class="Buttons">
-        <button>Services &#8594;</button>
-        <button>Contact &#8594;</button>
-      </div>
+        <div class="buttons">
+          <button>Services &#8594;</button>
+          <button>Contact &#8594;</button>
+        </div>
         <div class="groepsfoto">
-          <img src="images/team-images/gruppenfoto.png" alt="groepsfoto van het team" width= "395" height="auto"></div>
-      </div>
+          <img src="images/team-images/gruppenfoto.png" alt="Team Photo" width="395" height="auto">
+        </div>
+      </section>
     </div>
+
+    <div class="containerTeam">
+    <select id="teamSelector">
+      <option value="TDT">The Development Team</option>
+      <option value="MARKETING">Marketing Team</option>
+      <option value="UI-TEAM">Ui Team</option>
+    </select>
   </div>
 
-<!-- Begin van de squad page-->
-  <div id="TDT">
-    <h2>The Development Team</h2>
-  </div>
-
-    <div class="the-team">
-    
-    <div class="persoon-1">
-      <a href="ibbie.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-0.png" alt="Ibbie's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Ibbie Pietersma</p>
-      <p>Front-end Developer</p>
-    </div>
-
-    <div class="persoon-2">
-      <a href="Arlyn.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-1.png" alt="Arlyn's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Another Team Member</p>
-      <p>Job Title</p>
-    </div>
-
-    <div class="persoon-3">
-      <a href="Lynnelle.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-2.png" alt="Lynnelle's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Another Team Member</p>
-      <p>Job Title</p>
-    </div>
-
-    <div class="persoon-4">
-      <a href="Sharia.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-3.png" alt="Sharia's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Another Team Member</p>
-      <p>Job Title</p>
-    </div>
-
-    <div class="persoon-5">
-      <a href="Rianon.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-4.png" alt="Rianon's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Another Team Member</p>
-      <p>Job Title</p>
-    </div>
-
-    <div class="persoon-6">
-      <a href="Dimitry.html"> 
-        <div class="foto"> 
-          <img src="images/team-images/image-5.png" alt="Dimitry's Image" height="auto">
-        </div>
-      </a>
-      <p class="firstname-lastname">Another Team Member</p>
-      <p>Job Title</p>
-    </div>
-  </div>
-
+    <section class="team-section TDT " id="TDT">
+      <!-- Teamlid 1 -->
+      <article class="team-member" id="ibbie">
+        <a href="ibbie.html">
+          <div class="foto">
+            <img src="images/team-images/image-0.png" alt="Ibbie's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Ibbie Pietersma</p>
+        <p>Front-end Developer</p>
+      </article>
+      <!-- Teamlid 2 -->
+      <article class="team-member" id="arlyn">
+        <a href="Arlyn.html">
+          <div class="foto">
+            <img src="images/team-images/image-1.png" alt="Arlyn's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Arlyn</p>
+        <p>Front-end Developer</p>
+      </article>
+      <article class="team-member" id="Rianon">
+        <a href="Rianon.html">
+          <div class="foto">
+            <img src="images/team-images/image-4.png" alt="Rianon's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Rianon</p>
+        <p>Front-end Developer</p>
+      </article>
+      <article class="team-member" id="Dimitry">
+        <a href="Dimitry.html">
+          <div class="foto">
+            <img src="images/team-images/image-5.png" alt="Dimitry's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Dimitry</p>
+        <p>Back-end Developer</p>
+      </article>
+      <article class="team-member" id="Martino">
+        <a href="Martino.html">
+          <div class="foto">
+            <img src="images/team-images/image-6.png" alt="Martino's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Martino</p>
+        <p>Scrum Master</p>
+      </article>
+      <article class="team-member" id="Freedman">
+        <a href="Freedman.html">
+          <div class="foto">
+            <img src="images/team-images/image-7.png" alt="Freedman's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Freedman</p>
+        <p>Lead Client Team</p>
+      </article>
+    </section>
   
+    <section class="team-section MARKETING" id="MARKETING">
+      <!-- Teamlid 1 -->
+      <article class="team-member" id="lynnelle">
+        <a href="Lynnelle.html">
+          <div class="foto">
+            <img src="images/team-images/image-2.png" alt="Lynnelle's Image" height="auto">
+          </div>
+        </a>
+        <p class="firstname-lastname">Another Team Member</p>
+        <p>Job Title</p>
+      </article>
+      <!-- Teamlid 2 -->
+      <article class="team-member" id="sharia">
+            <a href="Sharia.html">
+              <div class="foto">
+                <img src="images/team-images/image-3.png" alt="Sharia's Image" height="auto">
+              </div>
+            </a>
+            <p class="firstname-lastname">Another Team Member</p>
+            <p>Job Title</p>
+      </article>
+    </section>
+    </main>
+    
   <script src="scripts/script.js"></script>
 
 </body>

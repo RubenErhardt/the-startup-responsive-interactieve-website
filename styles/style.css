@@ -1,3 +1,5 @@
+/* Algemene opmaak */
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,11 +12,11 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(23,23,24,1) 35%, rgb(12, 12, 12) 100%);
-  color: white;
+  background: linear-gradient(90deg, rgba(23, 23, 23, 1) 0%, rgba(23, 23, 24, 1) 35%, rgb(12, 12, 12) 100%);
+  color: var(--white);
   font-family: 'Ubuntu', sans-serif;
-  margin: 0; 
-  letter-spacing:normal;
+  margin: 0;
+  letter-spacing: normal;
 }
 
 * {
@@ -22,10 +24,11 @@ body {
   list-style: none;
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-/* ========= NAV ========= */
+/* Header sectie */
+
 header {
   padding: 1em 0.8em;
 }
@@ -35,7 +38,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 8;
-  margin-bottom: 20px; /* Adjusted margin for better spacing */
+  margin-bottom: 20px;
 }
 
 .header-full a {
@@ -50,6 +53,8 @@ header {
   font-size: 25px;
   cursor: pointer;
 }
+
+/* Overlay sectie */
 
 .overlay {
   position: fixed;
@@ -79,11 +84,11 @@ header {
   color: var(--white);
   height: 100%;
   width: 100%;
-  transition: left 0.5s ease-in-out; 
+  transition: left 0.5s ease-in-out;
 }
 
 .menu-content.show {
-  left: 50% /* Schuif naar het midden wanneer weergegeven */
+  left: 50%;
 }
 
 .close-btn {
@@ -94,7 +99,7 @@ header {
   cursor: pointer;
 }
 
-.close-btn:hover{
+.close-btn:hover {
   color: red;
 }
 
@@ -116,8 +121,22 @@ header {
   opacity: 1;
 }
 
-.text h1 {
-  margin-bottom: 40px;
+/* Teamtekst beginpagina sectie */
+
+.container{
+  max-width: 400px;
+}
+
+main {
+  margin: 25px;
+}
+
+.teams h1 {
+  margin-bottom: 20px;
+}
+
+.teams {
+  margin-bottom: 10px;
 }
 
 .team-text {
@@ -125,33 +144,68 @@ header {
   padding-bottom: 3px;
 }
 
-.container {
-  margin: 25px;
+
+.buttons {
+  margin-top: 20px;
 }
+
+/* Groepsfoto sectie */
 
 .groepsfoto img {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 10px;
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
-.text p {
-  color: var(--ptext);
-  border-bottom: solid 0.2em var(--green);
-  padding-bottom: 10px;
+/* The Team-sectie */
+
+.containerTeam {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.the-team {
+#teamSelector {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#teamSelector:hover {
+  background-color: lighten(var(--green), 20%);
+}
+
+#teamSelector:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#teamSelector option {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.team-section {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.the-team p{
+.visible {
+  display: block;
+}
+
+.team-section p {
   margin-left: 20px;
 }
+
+/* Buttons sectie */
 
 button {
   color: var(--ptext);
@@ -159,7 +213,6 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 20px;
   font-size: 17px;
   margin-right: 15px;
   margin-bottom: 20px;
@@ -168,6 +221,8 @@ button {
 button:hover {
   color: var(--green);
 }
+
+/* Foto's sectie */
 
 .foto {
   display: flex;
@@ -184,60 +239,55 @@ button:hover {
   margin: 10px;
   margin-left: 20px;
   border-radius: 15px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.foto img {
-    filter: grayscale(100%);
+.foto img:hover {
+  filter: grayscale(0%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
-@media (max-width: 430px) {
+/* Media Query sectie */
+
+@media (max-width: 500px) {
   .foto img {
-    width: 395px;
+    width: 365px;
     height: auto;
     margin: 5px;
     margin-left: 10px;
   }
 
-  .the-team p {
+  .team-section p {
     margin-left: 10px;
   }
 }
 
-#TDT h2{
+/* TDT sectie */
+
+#TDT h2 {
   text-align: center;
 }
 
-.firstname-lastname {
-  transition: color 0.3s ease; /* Add smooth transition for color change */
+/* Hover effect voor teamleden sectie */
+
+[class^="team-member"]:hover .firstname-lastname {
+  color: var(--green);
+  transition: color 0.4s ease-in-out;
 }
 
-[class^="persoon-"]:hover .firstname-lastname {
-  color: var(--green);
-  transition: color .4s ease-in-out;
-}
+/* Titelanimatie sectie */
 
 #TDT h2 {
-  animation: titleAnimation 4s infinite; /* Adjust the duration and other properties as needed */
+  animation: titleAnimation 4s infinite;
   color: var(--white);
 }
 
-/*waarom zorgt dit ervoor dat er invisible space komt
-@keyframes titleAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+.team-section {
+  display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.TDT {
+  display: flex;
+}

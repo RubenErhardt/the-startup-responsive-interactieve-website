@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ibbie</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Card</title>
+  <!DOCTYPE html>
+  <html lang="en">
 </head>
 <body>
+<div class="business-card">
+      <img class="profile-img" src="images/team-images/image-0.png" alt="Profile Image">
+      <div class="name">Ibbie Pietersma</div>
+      <div class="job-title">Front-end Developer</div>
+      <div class="department">Training</div>
+      <div class="bio">Hallo ik doe frontend en ben in training.</div>
+      
+      <div class="social-links">
+        <a class="social-link" href="https://twitter.com" target="_blank">Twitter</a>
+        <a class="social-link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
 
-   <h1>Hoi ik ben ibbie</h1>
-   <a href="index.html">Back to Team Page</a>
+      <div class="backto"><a href="index.html">Back to Team Page</a></div>
+</div>
+    <style>
+        :root {
+          --white: #FFFFFF;
+          --green: #04d043;
+          --grey: #5b5b5b;
+          --ptext: rgb(186, 186, 186);
+        }
     
+        body {
+          background: linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(23,23,24,1) 35%, rgb(12, 12, 12) 100%);
+          color: white;
+          font-family: 'Ubuntu', sans-serif;
+          margin: 0; 
+          letter-spacing:normal;
+        }
+
+        a {
+  text-decoration: none; /* Geen underline */
+  color: inherit; /* Erfen de kleur van de ouder (normaal gesproken zwart) */
+  transition: color 0.3s; /* Voeg een overgangseffect toe voor een vloeiende kleurverandering */
+}
+
+a{
+    margin-bottom: 20px;
+}
+a:hover {
+  color:var(--white);
+}
+    
+        .business-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px var(--green);
+          max-width: 300px;
+          margin: 50px auto;
+        }
+
+        .backto{
+            color: var(--green);
+        }
+    
+        .profile-img {
+          border-radius: 50%;
+          margin-bottom: 15px;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+    
+        .name {
+          font-size: 1.5em;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        .job-title {
+          font-size: 1.2em;
+          color: var(--grey);
+          margin-bottom: 10px;
+        }
+    
+        .department {
+          font-size: 1em;
+          margin-bottom: 10px;
+        }
+    
+        .bio {
+          font-size: 0.9em;
+          line-height: 1.5;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+    
+        .social-links {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+        }
+    
+        .social-link {
+          color: var(--white);
+          text-decoration: none;
+          font-size: 1.2em;
+          transition: color 0.3s;
+        }
+    
+        .social-link:hover {
+          color: var(--green);
+        }
+      </style>
+    </head>
 </body>
-</html>
+  </html>
+  

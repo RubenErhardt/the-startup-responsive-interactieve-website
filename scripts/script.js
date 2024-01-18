@@ -28,3 +28,15 @@ document.getElementById('closeMenu').addEventListener('click', function() {
   });
 });
 
+const teamSelector = document.getElementById('teamSelector');
+const teamSections = document.querySelectorAll('.team-section');
+
+teamSelector.addEventListener('change', () => {
+  const selectedTeam = teamSelector.value;
+
+  // Verberg alle teamsecties
+  teamSections.forEach(section => section.classList.remove('visible'));
+
+  // Toon de geselecteerde teamsectie
+  document.getElementById(selectedTeam).classList.add('visible');
+});
