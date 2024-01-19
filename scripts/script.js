@@ -28,6 +28,8 @@ document.getElementById('closeMenu').addEventListener('click', function() {
   });
 });
 
+//kiezen welk team je wilt zien
+
 document.getElementById('teamSelector').addEventListener('change', function () {
   var selectedTeam = this.value;
   var teamSections = document.querySelectorAll('.team-section');
@@ -39,10 +41,12 @@ document.getElementById('teamSelector').addEventListener('change', function () {
   document.getElementById(selectedTeam).style.display = 'flex';
 });
 
+
+//pijltje naar boven 
 const footerArrow = document.querySelector('.footer-arrow');
 const headerFull = document.querySelector('.header-full');
 
 footerArrow.addEventListener('click', () => {
-  // Voeg hier eventuele animaties of andere gewenste logica toe
+
   headerFull.scrollIntoView({ behavior: 'smooth' }); // Scroll naar de header-full class
 });

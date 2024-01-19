@@ -265,6 +265,13 @@ button:hover {
   transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover effect voor teamleden sectie */
+
+[class^="team-member"]:hover .firstname-lastname {
+  color: var(--green);
+  transition: color 0.4s ease-in-out;
+}
+
 .foto img:hover {
   filter: grayscale(0%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -302,26 +309,8 @@ button:hover {
     margin-bottom: 200px;
   }
 }
-/* TDT sectie */
 
-#TDT h2 {
-  text-align: center;
-}
-
-/* Hover effect voor teamleden sectie */
-
-[class^="team-member"]:hover .firstname-lastname {
-  color: var(--green);
-  transition: color 0.4s ease-in-out;
-}
-
-/* Titelanimatie sectie */
-
-#TDT h2 {
-  animation: titleAnimation 4s infinite;
-  color: var(--white);
-}
-
+/*The development team hulp met javascript*/
 .team-section {
   display: none;
 }
@@ -329,6 +318,8 @@ button:hover {
 .TDT {
   display: flex;
 }
+
+/*footer sectie*/
 
 footer {
   color: var(--white);
