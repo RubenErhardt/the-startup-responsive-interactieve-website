@@ -29,7 +29,7 @@ document.getElementById('teamSelector').addEventListener('change', function () {
     section.style.display = 'none';
   });
 
-  if (selectedTeam === 'alle-teams') {
+  if (selectedTeam === 'all-teams') {
     teamSections.forEach(function (section) {
       section.style.display = 'flex';
     });
@@ -50,7 +50,6 @@ footerArrow.addEventListener('click', () => {
 });
 
 function submitForm() {
-      // Voeg hier de logica toe om het formulier te verzenden en feedback weer te geven
       var feedbackElement = document.getElementById('feedback');
       feedbackElement.innerHTML = 'Thanks for reaching out! We will get back to you soon.';
     }
