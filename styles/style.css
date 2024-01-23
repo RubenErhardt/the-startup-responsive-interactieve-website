@@ -163,15 +163,36 @@ main {
 
 /* Groepsfoto sectie */
 
-.groepsfoto img {
+.groepsfoto {
+  position: relative;
   margin-bottom: 20px;
   margin-top: 20px;
-  border-radius: 16px;
-  width: 100%; 
   max-width: 475px; 
   max-height: 350px; 
-  height: auto; 
 }
+
+.groepsfoto img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 16px;
+  filter: grayscale(100%);
+}
+
+.groepsfoto img:hover{
+  filter: grayscale(0%);
+}
+
+.groepsfoto::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px; 
+  background-color: var(--green);
+}
+
 
 /* The Team-sectie */
 
@@ -279,7 +300,8 @@ button:hover {
 .foto img:hover {
   filter: grayscale(0%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: rotateY(180deg) scaleX(-1); /* Omklapeffect met spiegeling toegevoegd */
+  transform: scale(1.05);
+  box-shadow: 1px 1px 1px 1px var(--green);
 }
 
 
@@ -538,4 +560,17 @@ a:hover {
 
 .social-link:hover {
   color: var(--green);
+}
+
+.animated-label {
+  font-size: 24px; 
+  display: inline-block;
+  margin-right: 50px;
+  animation: labelGrow 2s infinite alternate; 
+}
+
+@keyframes labelGrow {
+  to {
+    font-size: 26px;
+  }
 }
