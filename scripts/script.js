@@ -1,34 +1,25 @@
-document.getElementById('openMenu').addEventListener('click', function() {
+function toggleMenu(show) {
   const menuOverlay = document.getElementById('menuOverlay');
   const menuContent = document.querySelector('.menu-content');
   const images = document.querySelectorAll('img');
 
-  menuOverlay.classList.add('show');
-  menuContent.classList.add('show');
+  menuOverlay.classList.toggle('show', show);
+  menuContent.classList.toggle('show', show);
 
   // Verberg alle afbeeldingen met vertraging
   images.forEach((img, index) => {
     img.style.transition = `opacity 0.5s ${index * 0.1}s`; // Aangepaste vertraging per afbeelding
-    img.style.opacity = '0';
+    img.style.opacity = show ? '0' : '1';
   });
+}
+
+document.getElementById('openMenu').addEventListener('click', function() {
+  toggleMenu(true);
 });
 
 document.getElementById('closeMenu').addEventListener('click', function() {
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuContent = document.querySelector('.menu-content');
-  const images = document.querySelectorAll('img');
-
-  menuOverlay.classList.remove('show');
-  menuContent.classList.remove('show');
-
-  // Maak alle afbeeldingen weer zichtbaar met vertraging
-  images.forEach((img, index) => {
-    img.style.transition = `opacity 0.5s ${index * 0.1}s`; // Aangepaste vertraging per afbeelding
-    img.style.opacity = '1';
-  });
+  toggleMenu(false);
 });
-
-//kiezen welk team je wilt zien
 
 document.getElementById('teamSelector').addEventListener('change', function () {
   var selectedTeam = this.value;
@@ -38,8 +29,15 @@ document.getElementById('teamSelector').addEventListener('change', function () {
     section.style.display = 'none';
   });
 
-  document.getElementById(selectedTeam).style.display = 'flex';
+  if (selectedTeam === 'alle-teams') {
+    teamSections.forEach(function (section) {
+      section.style.display = 'flex';
+    });
+  } else {
+    document.getElementById(selectedTeam).style.display = 'flex';
+  }
 });
+
 
 
 //pijltje naar boven 
