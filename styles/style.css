@@ -142,6 +142,7 @@ main {
 
 .text-container {
   flex-grow: 1; /* Take remaining space in the container */
+  max-width: 400px;
 }
 
 
@@ -152,9 +153,7 @@ main {
 
 .teams p {
   color: var(--ptext);
-  max-width: 400px;
-  min-width: 400px;
-  
+  max-width: 100%;
 }
 
 .team-text {
@@ -267,18 +266,20 @@ button:hover {
   filter: grayscale(100%);
   transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 /* Hover effect voor teamleden sectie */
-
 [class^="team-member"]:hover .firstname-lastname {
   color: var(--green);
   transition: color 0.4s ease-in-out;
 }
 
+.foto img {
+  transition: transform 0.4s ease-in-out;
+}
+
 .foto img:hover {
   filter: grayscale(0%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease-in-out; 
+  transform: rotateY(180deg) scaleX(-1); /* Omklapeffect met spiegeling toegevoegd */
 }
 
 
