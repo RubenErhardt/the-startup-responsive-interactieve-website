@@ -346,6 +346,19 @@ button:hover {
   display: flex;
 }
 
+.animated-label {
+  font-size: 24px; 
+  display: inline-block;
+  margin-right: 50px;
+  animation: labelGrow 2s infinite alternate; 
+}
+
+@keyframes labelGrow {
+  to {
+    font-size: 26px;
+  }
+}
+
 /*footer sectie*/
 
 footer {
@@ -404,27 +417,32 @@ nav a:hover {
 
 /*nog wat mediaquery*/
 
-@media (min-width: 950px) and (max-width: 1400px) {
+@media (min-width: 950px) {
   .teamtekst {
-    max-width: 950px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
-}
 
+  .teams{
+    align-items: center;
+    justify-content: space-between;
+  }
 
-@media (min-width: 1400px) {
-  .teamtekst {
-    margin-left: 200px;
-    margin-right: 200px;
+  .groepsfoto::after{
+    display: none;
   }
 }
+
+
 
 @media (min-width: 890px) {
   .team-section {
     margin-left: auto;
     margin-right: auto;
     max-width: 890px;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 /*contact*/
@@ -465,6 +483,21 @@ input, textarea {
 .teskt-laten-zien{
   display: block;
   text-align: center;
+}
+
+/*aparte kaartjes*/
+
+a {
+  text-decoration: none;
+  color: inherit; 
+  transition: color 0.3s; 
+}
+
+a{
+    margin-bottom: 20px;
+}
+a:hover {
+  color:var(--white);
 }
     
 .business-card {
@@ -539,15 +572,3 @@ input, textarea {
   color: var(--green);
 }
 
-.animated-label {
-  font-size: 24px; 
-  display: inline-block;
-  margin-right: 50px;
-  animation: labelGrow 2s infinite alternate; 
-}
-
-@keyframes labelGrow {
-  to {
-    font-size: 26px;
-  }
-}
