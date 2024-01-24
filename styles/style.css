@@ -133,6 +133,10 @@ main {
   margin: 25px;
 }
 
+.text-container h1{
+  font-size: 40px;
+}
+
 .teams {
   margin-bottom: 10px;
   display: flex; 
@@ -350,14 +354,8 @@ button:hover {
   font-size: 24px; 
   display: inline-block;
   margin-right: 50px;
-  animation: labelGrow 2s infinite alternate; 
 }
 
-@keyframes labelGrow {
-  to {
-    font-size: 26px;
-  }
-}
 
 /*footer sectie*/
 
@@ -427,10 +425,6 @@ nav a:hover {
   .teams{
     align-items: center;
     justify-content: space-between;
-  }
-
-  .groepsfoto::after{
-    display: none;
   }
 }
 
