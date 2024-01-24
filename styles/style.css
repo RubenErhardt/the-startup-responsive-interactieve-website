@@ -186,6 +186,7 @@ main {
   filter: grayscale(0%);
 }
 
+/*
 .groepsfoto::after {
   content: '';
   position: absolute;
@@ -196,6 +197,7 @@ main {
   height: 3px; 
   background-color: var(--green);
 }
+*/
 
 
 /* The Team-sectie */
